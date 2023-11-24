@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        .dark{
+            padding: 10px;
+            height: 50px;
+            width: 100px;
+            background-color: #000;
+            border-radius: 50px;
+            display: flex;
+            justify-content: start;
+        }
+        button{ 
+            padding: 10px;
+            width: 50px;
+            border-radius: 100px;
+            outline: none;
+            border: none;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" style="background-color: white;">
+        <div class="dark">
+            <button></button>
+        </div>
+    </div>
+    <script>
+        var cont = document.querySelector('.container');
+        var btn = document.querySelector('button');
+        var dark = document.querySelector('.dark')
+        btn.addEventListener('click',function(){
+            if(dark.style.justifyContent == "start",cont.style.backgroundColor == "white"){
+                dark.style.justifyContent = "end"
+                cont.style.backgroundColor = "black"
+                dark.style.backgroundColor = "white" 
+                btn.style.backgroundColor = "black"
+            }
+            else{
+                dark.style.justifyContent = "start"
+                cont.style.backgroundColor = "white"
+                dark.style.backgroundColor = "black"
+                btn.style.backgroundColor = "white"
+            }
+        })
+    </script>
+</body>
+</html>
